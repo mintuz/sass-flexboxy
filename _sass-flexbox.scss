@@ -1,0 +1,187 @@
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin justify-content($justified) {
+
+  $map: (
+    flex-end: (
+      pack: end
+    ),
+    flex-start: (
+      pack: start
+    ),
+    center: (
+      pack: center
+    ),
+    space-between: (
+      pack: justify
+    ),
+    space-around: (
+      pack: distribute
+    )
+  );
+
+  $versions: map-get($map, $justified);
+
+  -webkit-box-pack: map-get($versions, pack);
+  -ms-flex-pack: map-get($versions, pack);
+  -webkit-justify-content: $justified;
+  justify-content: $justified;
+}
+
+@mixin align-content($align-content) {
+
+  $map: (
+    flex-end: (
+      pack: end
+    ),
+    flex-start: (
+      pack: start
+    ),
+    center: (
+      pack: center
+    ),
+    space-between: (
+      pack: justify
+    ),
+    space-around: (
+      pack: distribute
+    ),
+    stretch: (
+      pack: stretch
+    )
+  );
+
+  $versions: map-get($map, $align-items);
+
+  -webkit-align-content: $align-content;
+  -ms-flex-line-pack: map-get($versions, pack);
+  align-content: $align-content;
+}
+
+@mixin align-items($align-items) {
+
+  $map: (
+    flex-end: (
+      align: end
+    ),
+    flex-start: (
+      align: start
+    ),
+    center: (
+      align: center
+    ),
+    baseline: (
+      align: baseline
+    ),
+    stretch: (
+      align: stretch
+    )
+  );
+
+  $versions: map-get($map, $align-items);
+
+  -webkit-box-align: map-get($versions, align);
+  -webkit-align-items: $align-items;
+  -ms-flex-align: map-get($versions, align);
+  align-items: $align-items;
+}
+
+@mixin align-self($align-self) {
+
+  $map: (
+    flex-end: (
+      align: end
+    ),
+    flex-start: (
+      align: start
+    ),
+    center: (
+      align: center
+    ),
+    baseline: (
+      align: baseline
+    ),
+    stretch: (
+      align: stretch
+    )
+  );
+
+  $versions: map-get($map, $align-self);
+
+  -webkit-align-self: $align-self;
+  -ms-flex-item-align: map-get($versions, align);
+  align-self: $align-self;
+}
+
+@mixin flex-direction($direction) {
+
+  $map: (
+    column: (
+      orient: vertical,
+      direction: normal
+    ),
+    column-reverse: (
+      orient: vertical,
+      direction: reverse
+    ),
+    row: (
+      orient: horizontal,
+      direction: normal
+    ),
+    row-reverse: (
+      orient: horizontal,
+      direction: reverse
+    )
+  );
+
+  $versions: map-get($map, $direction);
+
+  -webkit-box-orient: map-get($versions, orient);
+  -webkit-box-direction: map-get($versions, direction);
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap: wrap) {
+  -ms-flex-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex($flex) {
+  -ms-flex: $flex;
+  -webkit-flex: $flex;
+  flex: $flex;
+}
+
+@mixin flex-basis($size) {
+  -webkit-flex-basis: $size;
+  -ms-flex-preferred-size: $size;
+  flex-basis: $size;
+}
+
+@mixin order($order) {
+  -webkit-box-ordinal-group: $order + 1;
+  -webkit-order: $order;
+  -ms-flex-order: $order;
+  order: $order;
+}
+
+@mixin flex-grow($grow) {
+  -webkit-box-flex: $grow;
+  -webkit-flex-grow: $grow;
+  -ms-flex-positive: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+  -ms-flex-negative: $shrink;
+  flex-shrink: $shrink;
+}

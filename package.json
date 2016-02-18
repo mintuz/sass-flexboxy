@@ -1,0 +1,19 @@
+{
+  "name": "sass-flexbox",
+  "version": "1.0.0",
+  "description": "A set of sass flexbox mixins",
+  "main": "_sass-flexbox.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mintuz/sass-flexbox.git"
+  },
+  "keywords": [
+    "flexbox"
+  ],
+  "author": "Adam Bulmer <mintuz1990@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mintuz/sass-flexbox/issues"
+  },
+  "homepage": "https://github.com/mintuz/sass-flexbox#readme"
+}

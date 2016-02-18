@@ -1,0 +1,23 @@
+{
+  "name": "sass-flexbox",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mintuz/sass-flexbox",
+  "authors": [
+    "Adam Bulmer <mintuz1990@gmail.com>"
+  ],
+  "description": "A set of sass flexbox mixins",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "css",
+    "flexbox",
+    "flex box",
+    "flex"
+  ]
+}
